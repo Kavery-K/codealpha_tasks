@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Music Player</title>
+    <title>Image Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="player">
-    <h2 id="title">Song Name</h2>
+<h2>Image Gallery</h2>
+<div class="gallery">
+    <img src="https://picsum.photos/id/1015/300/200" onclick="openImage(this.src)">
+    <img src="https://picsum.photos/id/1016/300/200" onclick="openImage(this.src)">
+    <img src="https://picsum.photos/id/1018/300/200" onclick="openImage(this.src)">
+    <img src="https://picsum.photos/id/1020/300/200" onclick="openImage(this.src)">
+    <img src="https://picsum.photos/id/1024/300/200" onclick="openImage(this.src)">
+    <img src="https://picsum.photos/id/1035/300/200" onclick="openImage(this.src)">
+</div>
 
-    <audio id="audio"></audio>
-
-    <input type="range" id="progress" value="0">
-
-    <div class="controls">
-        <button onclick="prevSong()">⏮</button>
-        <button onclick="playPause()">▶️</button>
-        <button onclick="nextSong()">⏭</button>
-    </div>
-
-    <input type="range" id="volume" min="0" max="1" step="0.1">
+<div id="popup" onclick="closeImage()">
+    <img id="popup-img">
 </div>
 
 <script src="script.js"></script>
